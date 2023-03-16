@@ -39,7 +39,7 @@ document.querySelectorAll( 'td:nth-child(3)' ).forEach( (item) => {
 document.querySelectorAll( 'td:nth-child(5)' ).forEach( (item) => {
   if (item.textContent.match( /^\s*$/ )) {
     let filename = item.parentElement.childNodes[1].textContent;
-    let suffix = filename.match( /\.(.*)$/ );
+    let suffix = filename.match( /\.([^\.\/]+)$/ );
     if (suffix) {
       item.innerHTML = suffix[1].toUpperCase() + ' file';
     }

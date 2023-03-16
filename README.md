@@ -70,7 +70,7 @@ Note that if you have multiple websites, this configuration can go in the global
 
 The Apache mod_autoindex documentation is a terrific resource if you want to customize this further.
 
-[](https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html)
+<https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html>
 
 ## Authors
 
