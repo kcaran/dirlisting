@@ -66,6 +66,23 @@ IndexIgnore .DS_Store
 
 Note that if you have multiple websites, this configuration can go in the global `httpd.conf` file, but the `HeaderName` and `ReadmeName` directives need to be in your https or virtualhost configuration.
 
+```apache
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+
+# << virtual host apache configuration... >>
+
+Alias /scripts /var/www/scripts
+
+<IfModule mod_autoindex.c>
+HeaderName /scripts/dirlisting/dirheader.html
+ReadmeName /scripts/dirlisting/dirfooter.html
+</IfModule>
+
+</VirtualHost>
+</IfModule>
+```
+
 ## Resources
 
 The Apache mod_autoindex documentation is a terrific resource if you want to customize this further.
